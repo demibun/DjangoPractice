@@ -1,0 +1,57 @@
+from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
+from .models import Menu, Store
+from django.views.generic import View
+from .forms import AddMenuForm, AddStoreForm
+
+
+class AddMenu(View):
+    def post(self, request):
+        form = AddMenuForm(request.POST)
+        if form.is_valid():
+            menu_name = form.cleaned_data['menu_name']
+            store_name = form.cleaned_data['store_name']
+            price = form.cleaned_data['price']
+
+            new_menu = Menu(menu_name=menu_name, store_name=store_name, price=price)
+            new_menu.save()
+            return redirect('/menu/showMenus/')
+
+    def get(self, request):
+        form = AddMenuForm()
+        return render(request, 'menu/add_menu.html', {'form': form})
+
+
+class ShowMenus(View):
+    def get(self, request):
+        menus = Menu.objects.all()
+        return render(request, 'menu/show_menus.html', {'menus': menus})
+
+
+class AddStore(View):
+    def post(self, request):
+        form = AddStoreForm(request.POST)
+        if form.is_valid():
+            store_name = form.cleaned_data['store_name']
+            location = form.cleaned_data['location']
+            tel = form.cleaned_data['tel']
+
+            new_store = Store(store_name=store_name, location=location, tel=tel)
+            new_store.save()
+            return redirect('/menu/showStores/')
+
+    def get(self, request):
+        form = AddStoreForm()
+        return render(request, 'menu/add_store.html', {'form': form})
+
+
+class ShowStore(View):
+    def get(self, request):
+        stores = Store.objects.all()
+        return render(request, 'menu/show_stores.html', {'stores': stores})
+
+
+class StoreDetail(View):
+    def get(self, request, store_name):
+        menus = get_list_or_404(Menu, store_name=store_name)
+        print(menus)
+        return render(request, 'menu/stores_detail.html', {'menus': menus})
