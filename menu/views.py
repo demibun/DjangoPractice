@@ -1,7 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
 from .models import Menu, Store
-from django.views.generic import View
+from django.views.generic import View, TemplateView
 from .forms import AddMenuForm, AddStoreForm
+
+
+
+
 
 
 class AddMenu(View):
