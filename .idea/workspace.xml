@@ -2,37 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b371188-2f2b-448a-b47b-5c17478466bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/menu/migrations/0004_order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu/templates/menu/order/order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu/migrations/0005_store_menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu/migrations/0006_order_time.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu/templates/menu/order/order_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/templates/menu/stores_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu/templates/menu/stores_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/templates/menu/menu/add_store.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu/templates/menu/menu/add_store.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/templates/menu/order/order_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu/templates/menu/order/order_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/templates/polls/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu/templates/menu/order/order_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/templates/polls/name.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/templates/polls/result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/views.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,11 +45,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OckSangYun\Desktop\DjangoPractice\menu\templates\menu\main" />
       <recent name="C:\Users\OckSangYun\Desktop\DjangoPractice\menu\templates\menu\menu" />
       <recent name="C:\Users\OckSangYun\Desktop\DjangoPractice\menu\templates\menu\menuAndStore" />
       <recent name="C:\Users\OckSangYun\Desktop\DjangoPractice\menu\templates\menu\order" />
       <recent name="C:\Users\OckSangYun\Desktop\DjangoPractice" />
-      <recent name="C:\Users\CAU\Desktop\DjangoPractice\menu" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\OckSangYun\Desktop\DjangoPractice\menu\templates\menu" />

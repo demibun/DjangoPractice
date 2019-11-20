@@ -15,5 +15,7 @@ urlpatterns = [
     path('showStores/<str:store_name>', StoreDetail.as_view(), name='detail'),
 
     path('order/<str:store_name>/<str:menu_name>', Order.as_view(), name='order'),
-    path('order/orderDetail/<str:store_name>/<str:menu_name>', OrderDetail.as_view(), name='order_detail')
+    path('order/orderDetail/<str:store_name>/<str:menu_name>', OrderDetail.as_view(), name='order_detail'),
+    path('orderList/', TemplateView.as_view(template_name='menu/order/order_list.html'), name='order_list'),
+    path('orderList/<int:orderList_id>', TemplateView(template_name="order_detail"), name='order_list'),
 ]
