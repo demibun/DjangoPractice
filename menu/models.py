@@ -19,4 +19,16 @@ class Store(models.Model):
         return self.store_name
 
 
+class Order(models.Model):
+    name = models.CharField(max_length=10)
+    menu_name = models.CharField(max_length=100)
+    store_name = models.CharField(max_length=100)
+    tel = models.CharField(max_length=20)
+    location = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+
+
 

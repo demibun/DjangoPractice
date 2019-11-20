@@ -1,11 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
-from .models import Menu, Store
-from django.views.generic import View, TemplateView
-from .forms import AddMenuForm, AddStoreForm
-
-
-
-
+from django.shortcuts import render, redirect, get_list_or_404
+from .models import *
+from django.views.generic import View
+from .forms import *
 
 
 class AddMenu(View):
@@ -18,11 +14,11 @@ class AddMenu(View):
 
             new_menu = Menu(menu_name=menu_name, store_name=store_name, price=price)
             new_menu.save()
-            return redirect('/menu/showMenus/')
+            return redirect('/menu/menu/showMenus/')
 
     def get(self, request):
         form = AddMenuForm()
-        return render(request, 'menu/add_menu.html', {'form': form})
+        return render(request, 'menu/menu/add_menu.html', {'form': form})
 
 
 class ShowMenus(View):
@@ -41,21 +37,37 @@ class AddStore(View):
 
             new_store = Store(store_name=store_name, location=location, tel=tel)
             new_store.save()
-            return redirect('/menu/showStores/')
+            return redirect('/menu/menu/showStores/')
 
     def get(self, request):
         form = AddStoreForm()
-        return render(request, 'menu/add_store.html', {'form': form})
+        return render(request, 'menu/menu/add_store.html', {'form': form})
 
 
 class ShowStore(View):
     def get(self, request):
         stores = Store.objects.all()
-        return render(request, 'menu/show_stores.html', {'stores': stores})
+        return render(request, 'menu/menu/show_stores.html', {'stores': stores})
 
 
 class StoreDetail(View):
     def get(self, request, store_name):
         menus = get_list_or_404(Menu, store_name=store_name)
-        print(menus)
-        return render(request, 'menu/stores_detail.html', {'menus': menus})
+        return render(request, 'menu/menu/stores_detail.html', {'menus': menus})
+
+
+class Order(View):
+    def get(self, request, store_name, menu_name):
+        menus = get_list_or_404(Menu, menu_name=menu_name)
+        for menu in menus:
+            if menu.store_name == store_name:
+                price = menu.price
+
+        return render(request, 'menu/order/order.html', {'store_name': store_name, 'menu_name': menu_name, 'price': price})
+
+
+class OrderDetail(View):
+    def post(self, request, store_name, menu_name):
+        location = request.POST['location']
+        return render(request, 'menu/order/order_detail.html',
+                      {'location': location, 'store_name': store_name, 'menu_name': menu_name})
