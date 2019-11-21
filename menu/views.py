@@ -77,7 +77,8 @@ class Order(View):
 class OrderDetail(View):
     def post(self, request, store_name, menu_name):
         location = request.POST['location']
-        new_order = Order(name="홍길동", menu_name=menu_name, store_name=store_name, tel="010-1234-5678",
-                          location=location, time=datetime.now())
+        new_order = OrderList(name='홍길동', menu_name=menu_name, store_name=store_name, tel='010-1234-5678',
+                              location=location, time=datetime.now())
+        new_order.save()
         return render(request, 'menu/order/order_detail.html',
                       {'location': location, 'store_name': store_name, 'menu_name': menu_name})

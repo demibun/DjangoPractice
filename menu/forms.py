@@ -15,6 +15,3 @@ class AddStoreForm(forms.Form):
     location = forms.CharField(max_length=200)
     tel = forms.CharField(max_length=20)
 
-
-class Order(forms.Form):
-    location = forms.CharField(label='location', max_length=200)

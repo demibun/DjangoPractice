@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b371188-2f2b-448a-b47b-5c17478466bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/menu/migrations/0005_store_menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu/migrations/0006_order_time.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu/templates/menu/order/order_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu/templates/menu/order/order_list_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DjangoProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/templates/menu/menu/add_store.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu/templates/menu/menu/add_store.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/templates/menu/order/order_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu/templates/menu/order/order_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/templates/menu/order/order_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu/templates/menu/order/order_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu/views.py" afterDir="false" />
     </list>
@@ -40,8 +39,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/menu/templates/menu" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">

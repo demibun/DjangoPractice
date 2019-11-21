@@ -20,7 +20,7 @@ class Store(models.Model):
         return self.store_name
 
 
-class Order(models.Model):
+class OrderList(models.Model):
     name = models.CharField(max_length=10)
     menu_name = models.CharField(max_length=100)
     store_name = models.CharField(max_length=100)
