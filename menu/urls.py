@@ -16,7 +16,6 @@ urlpatterns = [
 
     path('order/<str:store_name>/<str:menu_name>', Order.as_view(), name='order'),
     path('order/orderDetail/<str:store_name>/<str:menu_name>', OrderDetail.as_view(), name='order_detail'),
-    path('orderList/', TemplateView.as_view(template_name='menu/order/order_list.html'), name='order_list'),
-    path('orderList/<int:orderList_id>', TemplateView.as_view(template_name='menu/order/order_list_detail.html'),
-         name='order_list'),
+    path('orderList/', OrderList.as_view(), name='order_list'),
+    path('orderList/<int:orderList_id>', OrderListDetail.as_view(), name='order_list_detail'),
 ]

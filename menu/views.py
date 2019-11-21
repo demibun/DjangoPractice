@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_list_or_404
+from django.shortcuts import render, redirect, get_list_or_404, get_object_or_404
 from .models import *
 from django.views.generic import View
 from .forms import *
@@ -77,8 +77,26 @@ class Order(View):
 class OrderDetail(View):
     def post(self, request, store_name, menu_name):
         location = request.POST['location']
-        new_order = OrderList(name='홍길동', menu_name=menu_name, store_name=store_name, tel='010-1234-5678',
-                              location=location, time=datetime.now())
+        new_order = Orders(name='홍길동', menu_name=menu_name, store_name=store_name, tel='010-1234-5678',
+                           location=location, time=datetime.now())
         new_order.save()
+
         return render(request, 'menu/order/order_detail.html',
                       {'location': location, 'store_name': store_name, 'menu_name': menu_name})
+
+
+class OrderList(View):
+    def get(self, request):
+        order_list = get_list_or_404(Orders)
+        return render(request, 'menu/order/order_list.html', {'order_list': order_list})
+
+
+class OrderListDetail(View):
+    def get(self, request, orderList_id):
+        order_detail = get_object_or_404(Orders, pk=orderList_id)
+        if order_detail.isFinished:
+            message = "승인되었습니다"
+        else:
+            message = "아직입니다. 더 기다려주세요"
+
+        return render(request, 'menu/order/order_list_detail.html', {'message': message})

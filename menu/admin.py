@@ -3,5 +3,5 @@ from .models import *
 
 admin.site.register(Menu)
 admin.site.register(Store)
-admin.site.register(OrderList)
+admin.site.register(Orders)
 
